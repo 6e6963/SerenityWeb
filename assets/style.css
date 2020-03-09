@@ -1,0 +1,259 @@
+/* Body text, regular (Western subset) */
+@font-face {
+  font-family: "Mastro Text";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../assets/fonts/mastro-text-book.woff2") format("woff2"),
+    url("../assets/fonts/mastro-text-book.woff") format("woff");
+}
+
+/* italic */
+@font-face {
+  font-family: "Mastro Text";
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../assets/fonts/mastro-text-book-italic.woff2") format("woff2"),
+    url("../assets/fonts/mastro-text-book-italic.woff") format("woff");
+}
+
+/* bold */
+@font-face {
+  font-family: "Mastro Text";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/mastro-text-bold.woff2") format("woff2"),
+    url("../assets/fonts/mastro-text-bold.woff") format("woff");
+}
+
+/* bold italic */
+@font-face {
+  font-family: "Mastro Text";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/mastro-text-bold-italic.woff2") format("woff2"),
+    url("../assets/fonts/mastro-text-bold-italic.woff") format("woff");
+}
+
+/* Headings, bold */
+@font-face {
+  font-family: "Mastro SubHead";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/mastro-subhead-bold.woff2") format("woff2"),
+    url("../assets/fonts/mastro-subhead-bold.woff") format("woff");
+}
+
+/* Very large text, bold */
+@font-face {
+  font-family: "Mastro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/mastro-display-bold.woff2") format("woff2"),
+    url("../assets/fonts/mastro-display-bold.woff") format("woff");
+}
+
+:root {
+  --f: #333;
+  --b: #eee;
+  --a: #900;
+
+  /* Serif with fallback */
+  --serif: "Mastro Text", Georgia, serif;
+
+  /* Native font stack */
+  --sans-serif:
+    /* Safari for macOS and iOS (San Francisco) */
+    -apple-system,
+    /* Chrome < 56 for macOS (San Francisco) */
+    BlinkMacSystemFont,
+    /* Windows */
+    "Segoe UI",
+    /* Android */
+    "Roboto",
+    /* Basic web fallback */
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Use a better box model (opinionated) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent adjustments of font size after orientation changes in iOS (fix) */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Remove the margin in all browsers (fix) */
+body {
+  margin: 0;
+  padding: 0;
+  font: 1em/1.5 var(--serif);
+  text-rendering: optimizeLegibility;
+  color: var(--f);
+  background: var(--b);
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  color: var(--a);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Add the correct font weight in Edge and Safari (fix) */
+b,
+strong {
+  font-weight: bolder;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Mastro SubHead", var(--serif);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Correct font-size within <section> and <article> (fix), default: 2rem */
+h1 {
+  font-size: 2.5em;
+}
+
+/* Extra spacing */
+h2 {
+  margin-top: 2em;
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.mt-0,
+.my-0 {
+  margin-top: 0;
+}
+
+.mb-0,
+.my-0 {
+  margin-bottom: 0;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.container {
+  max-width: 38em;
+  margin: auto;
+  padding: 4em 1em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  width: 100%;
+  padding: 1rem .5rem;
+}
+
+.btn {
+  padding: .375em .75em;
+  font-family: var(--sans-serif);
+  color: var(--b);
+  background: var(--a);
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+  background: var(--f);
+}
+
+.jumbotron {
+  padding: 10vw 1rem;
+  text-align: center;
+  font-size: 1.25em;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, .5); /* white, opacity 50% */
+  background-blend-mode: soft-light;
+}
+
+.site-title {
+  font-family: "Mastro Display", "Mastro SubHead", var(--serif);
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  body {
+    font-size: 1.125em;
+  }
+
+  .col-sm-3 {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --f: #eee;
+    --b: #333;
+    --a: #fc6;
+  }
+
+  .dim img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .dim img:hover {
+    opacity: 1;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, .5); /* black, opacity 50% */
+  }
+}
