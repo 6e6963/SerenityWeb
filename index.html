@@ -55,7 +55,11 @@
             </a>
           </strong><br>
           Leader<br>
-          Yumi#6079
+          <strong>
+            <a href="https://discordapp.com/users/229921762287026176">
+              Yumi#6079
+            </a>
+          </strong><br>
         </figcaption>
       </figure>
 
@@ -119,7 +123,7 @@
         + fc['Ranking']['Weekly'] + ' for this week';
       
       document.querySelector('#estate').textContent =
-        ' ' + fc['Estate']['Name'] + ' at ' + fc['Estate']['Plot'];
+        ' ' + fc['Estate']['Name'] + ' at ' + fc['Estate']['Plot'].replace(/ \((Small|Medium|Large)\)/, '');
 
       recruitment = fc['Recruitment'].toLowerCase();
       if(recruitment === 'open' || recruitment === 'closed') {
