@@ -114,9 +114,9 @@
       document.querySelector('#rank').textContent =
         ' and is now a rank ' + fc['Rank'] + ' FC.'
         + ' Currently we have ' + fc['ActiveMemberCount'] + ' active members.'
-        + ' As for Free Company Standings, we are ranked '
-        + fc['Ranking']['Monthly'] + ' for this month and '
-        + fc['Ranking']['Weekly'] + ' for this week';
+        + ' As for Free Company Standings, we were ranked '
+        + fc['Ranking']['Monthly'] + ' the previous month and '
+        + fc['Ranking']['Weekly'] + ' the previous week';
       
       document.querySelector('#estate').textContent =
         ' ' + fc['Estate']['Name'] + ' at ' + fc['Estate']['Plot'].replace(/ \((Small|Medium|Large)\)/, '');
