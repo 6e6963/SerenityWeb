@@ -147,8 +147,9 @@
 			document.querySelector('#rank').textContent =
 				` and is now a rank ${fc.Rank} FC.
 				Currently we have ${fc.ActiveMemberCount} active members.
-				Previous month we were ranked #${fc.Ranking.Monthly} on Free Company Standings,
-				previous week #${fc.Ranking.Weekly}`;
+				As for Free Company Standings, we were ranked
+				#${fc.Ranking.Monthly} previous month and
+				#${fc.Ranking.Weekly} previous week`;
 
 			const plot = fc.Estate.Plot.replace(/ \((Small|Medium|Large)\)/, '');
 			document.querySelector('#estate').textContent =
